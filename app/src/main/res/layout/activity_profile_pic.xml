@@ -7,7 +7,7 @@
     android:background="@drawable/gradient_drawable"
     tools:context=".ProfilePicActivity">
 
-    <ImageView
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/profilePic"
         android:layout_width="500px"
         android:layout_height="500px"
@@ -25,10 +25,12 @@
         app:layout_constraintEnd_toEndOf="@id/profilePic"
         app:layout_constraintBottom_toBottomOf="@id/profilePic"/>
 
-    <ImageView
+    <ImageButton
+        android:id="@+id/changeImage"
         android:layout_width="100px"
         android:layout_height="100px"
         android:src="@drawable/ic_baseline_edit_24"
+        android:background="?android:selectableItemBackground"
         app:layout_constraintStart_toStartOf="@id/pinkCircle"
         app:layout_constraintEnd_toEndOf="@id/pinkCircle"
         app:layout_constraintTop_toTopOf="@id/pinkCircle"
@@ -61,10 +63,13 @@
 
 
     <TextView
+        android:id="@+id/lewati"
         android:visibility="visible"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Lewati"
+        android:clickable="true"
+        android:onClick="lanjut"
         android:fontFamily="@font/redhatdisplay_regular"
         android:textStyle="bold"
         android:textSize="12pt"
@@ -75,10 +80,13 @@
         app:layout_constraintEnd_toEndOf="parent"/>
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/lanjut"
         android:visibility="invisible"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:cardCornerRadius="32dp"
+        android:clickable="true"
+        android:onClick="lanjut"
         android:backgroundTint="@color/pink"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -98,5 +106,6 @@
             android:layout_marginBottom="8dp"/>
 
     </androidx.cardview.widget.CardView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
